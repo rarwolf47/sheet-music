@@ -18,7 +18,9 @@ rightHand =
     \clef treble
     \relative c' {
       \partial 8 {
-        c'16 df
+        c'16 df~ df e8-. r16
+        \set tieWaitForNote = ##f
+        \tuplet 3/2 { gf8~ c~ df~ } <gf, c df>2
       }
     } 
     \\
