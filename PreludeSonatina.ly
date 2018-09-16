@@ -1,14 +1,25 @@
+\version "2.18.2"
+
 \language "english"
 
 \header {
   title = "SONATINA."
-  subtitle = "For Piano Solo"
-  composer = "R. A. Rolfes"
+  subtitle = "WITH PRELUDE."
+  composer = "R. A. Rolfes."
+}
+
+arpTiesOn = {
+    \set tieWaitForNote = ##t
+}
+
+
+arpTiesOff = {
+    \set tieWaitForNote = ##f
 }
 
 initStaffHead = {
   \numericTimeSignature
-  \time 4/4
+  \time 3/2
   \key c \major
 }
 
@@ -17,17 +28,10 @@ rightHand =
     \initStaffHead
     \clef treble
     \relative c' {
-      \partial 8 {
-        c'16 df~ df e8-. r16
-        \set tieWaitForNote = ##f
-        \tuplet 3/2 { gf8~ c~ df~ } <gf, c df>2
-      }
+        r2 <d d'>2 <af af'>2
     } 
     \\
     \relative c' {
-    \partial 8 {
-      <e~ gf~>8 <e gf>1
-    }
     }
   >>
 
