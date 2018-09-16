@@ -3,8 +3,7 @@
 \language "english"
 
 \header {
-  title = "SONATINA."
-  subtitle = "WITH PRELUDE."
+  title = "SONATINA & PRELUDE."
   composer = "R. A. Rolfes."
 }
 
@@ -24,16 +23,15 @@ initStaffHead = {
 }
 
 rightHand =
-  <<
+  {
     \initStaffHead
     \clef treble
     \relative c' {
-        r2 <d d'>2 <af af'>2
-    } 
-    \\
-    \relative c' {
+        r2 <d d'>2 <af' af'> |
+        r2 <a a'> <c c'> |
+        <b b'>8 <f f'>4.
     }
-  >>
+  }
 
 \score {
   \rightHand
