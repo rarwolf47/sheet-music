@@ -29,7 +29,7 @@ rightHand =
     \relative c' {
         r2 <d d'>2 <af' af'> |
         r2 <a a'> <c c'> |
-        <b b'>8 <f f'>4.
+        b16( f8.~ f4) r cs'8 <g, g'>8~ <g g'>2
     }
   }
 
