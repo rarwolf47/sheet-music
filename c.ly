@@ -13,7 +13,7 @@
 initKeyTime = {
 	\time 3/2
 	\key c \major
-	\tempo "Andante, stately" 2 = 43
+	\tempo "Andante, stately" 2 = 40
 }
 
 pnoUpper = {
@@ -21,11 +21,11 @@ pnoUpper = {
 	\clef treble
 	\relative c' {
 		\partial 4 { c' }
-		c8( d c af g4-.)
+		c8( d c af' g4-.)
 		\showStaffSwitch
 		\change Staff = "Lower" 
 		\voiceOne
-		<b,, a'>4 <bf g'>\fermata
+		<b,,, a'>4 <bf g'>\fermata
 		\hideStaffSwitch
 		\change Staff = "Upper"
 		\oneVoice
