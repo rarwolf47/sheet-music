@@ -10,31 +10,43 @@
 	tagline = ##f
 }
 
+initTempo = {
+    \override Score.MetronomeMark.padding = #4.15
+    \tempo "Andante maestoso" 2 = 40
+}
+
 initKeyTime = {
 	\time 3/2
 	\key c \major
-}
-
-initTempo = {
-    \override Score.MetronomeMark.padding = #4
-    \tempo "Moderately slow, stately" 2 = 40
 }
 
 pnoUpper = {
 	\initKeyTime
 	\clef treble
 	\relative c' {
-		\partial 4 { c' }
-		c8( d c af' g4-.)
+		% pickup
+		\shape #'((0 . 0) (1 . -2.5) (0 . 4.35) (-0.6 . -6)) PhrasingSlur
+		\partial 4 { c'4\( }
+		
+		% bar 1
+		c8( d c) af'( g4)
 		\showStaffSwitch
 		\change Staff = "Lower" 
 		\voiceOne
-		<b,,, a'>4 <bf g'>4.
-		%\hideStaffSwitch
+		<b,,, a'>4 <bf g'>4.\)
+		\change Staff = "Upper"
 		\oneVoice
-		%\once \hide Rest r4 
-    \change Staff = "Upper" f''8( e'4 df c-.)
-    s4*3
+    		f''8
+		
+		% bar 2
+		\tuplet 3/2 {
+			e'16[(_\markup { \italic "poco rubato" }
+			df e~]
+		}
+		\tuplet 3/2 {
+			e df8)
+		}
+    		c4-. s2*2
 	}
 }
 
@@ -43,14 +55,9 @@ pnoLower = {
 	\clef bass
 	\relative c {
 		\partial 4 { r4 }
-		r2 %<< {
-        		%\voiceOne
-        		%r4 <b' a> <bf g>4\fermata |
-      		%}
-      		%\new Voice {
-        		%\voiceTwo
+		r2 
 				e,2~ \voiceTwo e2
-      		%} %>> 
+
 		\oneVoice 
 		s2*3
 	}
