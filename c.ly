@@ -29,6 +29,7 @@ pnoUpper = {
 		\partial 4 { c'4\( }
 		
 		% bar 1
+		%\shape #'((0 . 0) (0 . 0) (0.25 . 0.25) (0 . 0)) Slur
 		c8( d c) af'( g4)
 		\showStaffSwitch
 		\change Staff = "Lower" 
@@ -39,6 +40,7 @@ pnoUpper = {
     		f''8
 		
 		% bar 2
+		%\shape #'((0 . 0) (0.25 . 0.15) (0.5 . 0.5) (0 . 0)) Slur
 		\tuplet 3/2 {
 			e'16[(_\markup { \italic "poco rubato" }
 			df e~]
