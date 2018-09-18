@@ -1,4 +1,3 @@
-% LilyBin
 \version "2.18.2"
 \language "english"
 
@@ -25,7 +24,8 @@ pnoUpper = {
 	\clef treble
 	\relative c' {
 		% pickup
-		\shape #'((0 . 0) (1 . -2.5) (0 . 4.35) (-0.6 . -6)) PhrasingSlur
+		%\shape #'((0 . 0) (1 . -2.5) (-0.75 . 4) (0 . -4)) PhrasingSlur
+		\shape #'((0 . 0) (7.5 . 0) (-0.75 . 0.75) (0 . -4)) PhrasingSlur
 		\partial 4 { c'4\( }
 		
 		% bar 1
