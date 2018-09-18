@@ -13,8 +13,9 @@
 initKeyTime = {
 	\time 3/2
 	\key c \major
-	\tempo "Andante, stately" 2 = 40
 }
+
+initTempo = \tempo "Moderately slow, stately" 2 = 40
 
 pnoUpper = {
 	\initKeyTime
@@ -55,6 +56,7 @@ pnoLower = {
 	{
 		\new PianoStaff <<
 			\new Staff = "Upper" <<
+                \initTempo
 				\pnoUpper
 			>>
 			\new Staff = "Lower" <<
