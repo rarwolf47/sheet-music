@@ -15,7 +15,10 @@ initKeyTime = {
 	\key c \major
 }
 
-initTempo = \tempo "Moderately slow, stately" 2 = 40
+initTempo = {
+    \override Score.MetronomeMark.padding = #3
+    \tempo "Moderately slow, stately" 2 = 40
+}
 
 pnoUpper = {
 	\initKeyTime
